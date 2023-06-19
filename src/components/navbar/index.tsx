@@ -10,7 +10,7 @@ export default function Navbar() {
     <nav className="self-start">
       <ul className="flex gap-3 text-sm text-neutral-500">
         <li>
-          <Link href="/" className="underline">Home</Link>
+          <Link href="/" className="underline" prefetch={false}>Home</Link>
         </li>
         {path.includes("task") && !path.includes("edit") ? (
           <li>

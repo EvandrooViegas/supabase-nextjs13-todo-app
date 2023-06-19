@@ -1,12 +1,14 @@
+"use client"
+
 import TodoList from "@/components/todo-list";
 import { supabase } from "@/lib/supabase";
 import Link from "next/link";
 
-export const dynamic = 'force-dynamic'
+export const revalidate = 0
 
 export default async function Home() {
+  
   const { data:tasks } = await supabase.from("tasks").select()
-
   return (
     <main className="">
       <section className="space-y-3">
